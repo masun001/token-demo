@@ -14,7 +14,7 @@ interface IERC20 {
 contract ERC20Interface {
     function totalSupply() public view returns (uint);
     function balanceOf(address tokenOwner) public view returns (uint balance);
-    function allowance(address tokenOwner, address spender) public constant returns (uint remaining);
+    function allowance(address tokenOwner, address spender) public view returns (uint remaining);
     function transfer(address to, uint tokens) public returns (bool success);
     function approve(address spender, uint tokens) public returns (bool success);
     function transferFrom(address from, address to, uint tokens) public returns (bool success);
@@ -227,7 +227,7 @@ contract StandardToken is ERC20, BasicToken {
 
 interface Token {
     function transferFrom(address _from, address _to, uint256 _value) external returns (bool success);
-    function balanceOf(address _owner) constant external returns (uint256 balance);
+    function balanceOf(address _owner) view external returns (uint256 balance);
 }
 /**
   @title airdrop demo
