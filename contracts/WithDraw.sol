@@ -44,7 +44,7 @@ contract Ownable {
  */
 interface Token {
     function transferFrom(address _from, address _to, uint256 _value) external returns (bool success);
-    function balanceOf(address _owner) constant external returns (uint256 balance);
+    function balanceOf(address _owner) view external returns (uint256 balance);
 }
 
 contract WithDraw is Ownable {
